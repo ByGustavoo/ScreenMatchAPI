@@ -4,8 +4,8 @@ plugins {
 	id("io.spring.dependency-management") version "1.1.7"
 }
 
-group = "br.com"
-version = "0.0.1-SNAPSHOT"
+group = "br.com.screenmatch"
+version = "0.0.3"
 
 java {
 	toolchain {
@@ -17,6 +17,15 @@ configurations {
 	compileOnly {
 		extendsFrom(configurations.annotationProcessor.get())
 	}
+}
+
+tasks.named<org.springframework.boot.gradle.tasks.bundling.BootJar>("bootJar") {
+	enabled = true
+	destinationDirectory.set(file("${projectDir}/dist"))
+}
+
+tasks.named<Jar>("jar") {
+	enabled = false
 }
 
 repositories {
