@@ -4,7 +4,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.1.7"
 }
 
-group = "br.com.screenmatch"
+group = "br.com.screenmatchapi"
 version = "0.0.3"
 
 java {
