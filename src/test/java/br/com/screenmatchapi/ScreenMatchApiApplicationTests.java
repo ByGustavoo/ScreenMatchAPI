@@ -1,4 +1,4 @@
-package br.com.ScreenMatchAPI;
+package br.com.screenmatchapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
