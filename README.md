@@ -28,11 +28,9 @@
 
 ## 🐘 Banco de Dados
 
-Para que a API consiga se conectar ao Banco de Dados, é necessário que o arquivo `screenmatch.properties` esteja localizado no diretório `home` do seu computador, dentro da pasta `screenmatch`, funcionando tanto em sistemas Linux quanto Windows.
-
+Para que a API consiga se conectar ao Banco de Dados, é necessário que o arquivo `screenmatch.properties` esteja localizado no diretório `home` do seu computador, dentro da pasta `screenmatch`.
 
  <br>
-
 
 🌐 Windows
 ```bash
