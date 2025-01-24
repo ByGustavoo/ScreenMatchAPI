@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "br.com.screenmatchapi"
-version = "0.0.5"
+version = "0.0.6"
 
 java {
 	toolchain {
@@ -40,8 +40,11 @@ dependencies {
 
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-webflux")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
+
+	implementation("org.modelmapper:modelmapper:2.4.4")
 
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
