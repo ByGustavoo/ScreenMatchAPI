@@ -26,11 +26,22 @@
 <br>
 
 
+## 🔑 API Key
+
+Para que a API envie requisições com sucesso, é necessário que o arquivo  `screenmatch.properties` contenha o campo `SECRET` com a sua API Key. Primeiro, [acesse o site do OMDB para cadastro de uma chave](https://www.omdbapi.com/apikey.aspx).
+
+No formulário que será exibido, marque a opção FREE! (1,000 daily limit) no campo `Account Type` e preencha os campos `Email` e `Name` com seu email e nome. No campo `Use`, coloque o seguinte texto: `Personal application for test purpose` e clique no botão Submit.
+
+![image](https://github.com/user-attachments/assets/0a6a250a-2582-4f12-9870-e0e0c93d536d)
+
+
 ## 🐘 Banco de Dados
 
 Para que a API consiga se conectar ao Banco de Dados, é necessário que o arquivo `screenmatch.properties` esteja localizado no diretório `home` do seu computador, dentro da pasta `screenmatch`.
 
+
  <br>
+
 
 🌐 Windows
 ```bash
