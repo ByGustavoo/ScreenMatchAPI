@@ -67,6 +67,23 @@ $ /home/<nome-do-usuario>/screenmatch/screenmatch.properties
 <br>
 
 
+## 🔷 Métodos Disponíveis
+
+ <br> 
+
+🔹 GET
+```bash
+# Busca um Filme pelo seu nome
+$ http://localhost:8080/movie/v1?movieName={💲}
+```
+
+🔹 POST
+```bash
+# Salva um Filme no Banco de Dados
+$ http://localhost:8080/movie/v1?movieName={💲}
+```
+
+
 ## 🖥️ Desenvolvido por:
 
 ### 📝 Linkedin: [Gustavo Correa](https://www.linkedin.com/in/gustavo-chauar-correa-946168269/)
