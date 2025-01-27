@@ -35,13 +35,13 @@ Para que a API consiga se conectar ao Banco de Dados, é necessário que o arqui
 🌐 Windows
 ```bash
 # Caminho para Windows
-$ C:\Users\<nome-do-usuario>\integracaoapi\integracaoapi.properties
+$ C:\Users\<nome-do-usuario>\screenmatch\screenmatch.properties
 ```
 
 🐧 Linux
 ```bash
 # Caminho para Linux
-$ /home/<nome-do-usuario>/integracaoapi/integracaoapi.properties
+$ /home/<nome-do-usuario>/screenmatch/screenmatch.properties
 ```
 
 
