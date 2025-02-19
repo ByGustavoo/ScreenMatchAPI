@@ -1,5 +1,7 @@
 package br.com.screenmatchapi.service;
 
+import br.com.screenmatchapi.exceptions.MovieNameException;
+import br.com.screenmatchapi.exceptions.MovieNotFoundException;
 import br.com.screenmatchapi.model.dto.MovieDTO;
 import br.com.screenmatchapi.model.dto.RatingsDTO;
 import br.com.screenmatchapi.model.entity.Movie;
@@ -23,8 +25,23 @@ public class MovieService extends AbstractService {
     @Autowired
     RatingsRepository ratingsRepository;
 
+    public MovieDTO findMovie(String pMovieName) {
+        MovieDTO movieDTO = find(pMovieName);
+
+        if (pMovieName != null) {
+
+            if (movieDTO.getImdbId() == null) {
+                throw new MovieNotFoundException();
+            }
+        } else {
+            throw new MovieNameException();
+        }
+
+        return movieDTO;
+    }
+
     public MovieDTO saveMovieAndRatings(String pMovieName) {
-        MovieDTO movieDTO = findMovie(pMovieName);
+        MovieDTO movieDTO = find(pMovieName);
 
         if (movieDTO != null) {
             String movieId = saveMovie(movieDTO);

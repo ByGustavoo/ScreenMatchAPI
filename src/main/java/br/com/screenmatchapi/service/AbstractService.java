@@ -10,12 +10,12 @@ import org.springframework.web.reactive.function.client.WebClient;
 public abstract class AbstractService {
 
     @Autowired
-    private WebClient webClient;
+    WebClient webClient;
 
     @Value("${SECRET}")
     private String secret;
 
-    public MovieDTO findMovie(String pTitle) {
+    public MovieDTO find(String pTitle) {
         return webClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .queryParam("t", pTitle)

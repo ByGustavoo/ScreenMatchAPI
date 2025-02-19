@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MovieController {
 
     @Autowired
-    private MovieService movieService;
+    MovieService movieService;
 
     @GetMapping("/v1")
     public ResponseEntity<MovieDTO> findMovie(String movieName) {

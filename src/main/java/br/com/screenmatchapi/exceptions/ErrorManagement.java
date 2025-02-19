@@ -1,9 +1,9 @@
 package br.com.screenmatchapi.exceptions;
 
 import br.com.screenmatchapi.exceptions.dto.BadRequestExceptionResponseDTO;
+import br.com.screenmatchapi.exceptions.dto.MovieNotFoundExceptionResponseDTO;
 import br.com.screenmatchapi.exceptions.dto.RuntimeExceptionResponseDTO;
-import br.com.screenmatchapi.exceptions.dto.UnauthorizedExceptionResonseDTO;
-import org.apache.coyote.BadRequestException;
+import br.com.screenmatchapi.exceptions.dto.ForbiddenExceptionResonseDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -15,12 +15,17 @@ public class ErrorManagement {
 
     @ExceptionHandler(WebClientResponseException.Unauthorized.class)
     public ResponseEntity<?> unauthorizedException() {
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(UnauthorizedExceptionResonseDTO.unauthorizedResponseDTO);
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ForbiddenExceptionResonseDTO.forbiddenResponseDTO);
     }
 
-    @ExceptionHandler(BadRequestException.class)
-    public ResponseEntity<?> badRequestExceptionException() {
+    @ExceptionHandler(MovieNameException.class)
+    public ResponseEntity<?> badRequestException() {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(BadRequestExceptionResponseDTO.badRequestExceptionResponseDTO);
+    }
+
+    @ExceptionHandler(MovieNotFoundException.class)
+    public ResponseEntity<?> movieNotFoundException() {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(MovieNotFoundExceptionResponseDTO.movieNotFoundExceptionDTO);
     }
 
     @ExceptionHandler(RuntimeException.class)
